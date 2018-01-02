@@ -1,0 +1,20 @@
+<table class="app-stock-table">
+  <thead class="app-stock-table__head">
+    <th *ngFor="let column of columns"
+      [ngClass]="{ 'app-stock-table__column-header': true, 'app-stock-table__column-sortable': column.columnParams.sortable }"
+      (click)="sortChange(column)"
+    >
+      {{ column.name }}
+    </th>
+  </thead>
+  <tbody class="app-stock-table__body">
+    <tr *ngFor="let item of items$ | async" class="app-stock-table__row">
+      <td *ngFor="let column of columns"
+        appStockTableCell
+        [ngClass]="['app-stock-table__cell', column.columnParams.cssClass]"
+        [cellItem]="item[column.fieldName]"
+        [cellColumn]="column">
+      </td>
+    </tr>
+  </tbody>
+</table>
