@@ -1,0 +1,14 @@
+.app-stock-pager {
+  text-align: center;
+  line-height: 2em;
+  margin: 2em auto;
+  max-width: 500px;
+
+  span {
+    cursor: pointer;
+  }
+}
+
+.app-stock-pager-active {
+  color: green;
+}

@@ -1,0 +1,11 @@
+<div class="app-stock-pager">
+  <span (click)="prev()">Prev</span>
+  <span
+    *ngFor="let page of range(itemsLength)"
+    [ngClass]="{ 'app-stock-pager-active': page === pageNumber }"
+    (click)="switchPage(page)"
+  >
+    {{ page }}
+  </span>
+  <span (click)="next()">Next</span>
+</div>

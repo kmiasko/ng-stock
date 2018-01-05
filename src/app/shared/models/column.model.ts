@@ -1,13 +1,10 @@
+import { SORTING_ORDER } from '@app/core/sort/sort.service';
+
 export enum COLUMN_TYPE {
   Text,
   Number,
   Currency,
   Percent,
-}
-
-export enum SORTING_ORDER {
-  ASCENDING,
-  DESCENDING,
 }
 
 export interface ColumnParams {
@@ -17,13 +14,14 @@ export interface ColumnParams {
   format?: string;
   percentColors?: boolean;
   cssClass?: string;
+  defaultSortOrder?: SORTING_ORDER;
 }
 
 export class Column {
   name: string;
   fieldName: string;
   type: COLUMN_TYPE;
-  columnParams: ColumnParams;
+  columnParams?: ColumnParams;
 
   constructor(
     name: string,

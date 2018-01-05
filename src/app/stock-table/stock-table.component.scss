@@ -1,37 +1,52 @@
 $background: rgba(0,0,0,0.1);
-$padding: (6px 10px);
+$padding: (15px 20px);
 
 .app-stock-table {
   table-layout: fixed;
   border-collapse: collapse;
+}
 
-  .app-stock-table__column-header {
-    text-align: center;
-    background: $background;
-    padding: $padding;
-    cursor: pointer;
-  }
+.app-stock-table__column-header {
+  text-align: center;
+  background: $background;
+  padding: $padding;
+  cursor: pointer;
+}
 
-  .app-stock-table__cell {
-    padding: $padding;
-  }
+.app-stock-table__cell {
+  padding: $padding;
+}
 
-  .app-stock-table__cell-currency,
-  .app-stock-table__cell-percent,
-  .app-stock-table__cell-number {
-    text-align: right;
-  }
+.app-stock-table__cell-currency,
+.app-stock-table__cell-percent,
+.app-stock-table__cell-number {
+  text-align: right;
+}
 
-  .app-stock-table__cell-text {
-    text-align: center;
-    background: $background;
-  }
+.app-stock-table__cell-text {
+  text-align: center;
+  background: $background;
+}
 
-  .app-stock-table__cell-percent-up {
-    color: green;
-  }
+.app-stock-table__cell-percent-up {
+  color: green;
+}
 
-  .app-stock-table__cell-percent-down {
-    color: red;
+.app-stock-table__cell-percent-down {
+  color: red;
+}
+
+.app-stock__last-update {
+  position: fixed;
+  width: 100px;
+  padding: 1em;
+  top: 20%;
+  transform: translateY(-50%);
+  right: 0;
+  background: $background;
+
+  span {
+    display: inline-block;
+    width: 100%;
   }
 }

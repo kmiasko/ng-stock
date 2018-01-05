@@ -1,4 +1,4 @@
-export class Item {
+export interface Item {
   cap24hrChange: number;
   long: string;
   mktcap: number;
